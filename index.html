@@ -1,0 +1,379 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="google-site-verification" content="7JRUGUB4UhNCoCQRQQhzwD4nzxhq4L-2t_7mncRMRQg" />
+    <meta name="robots" content="index, follow">
+    <meta name="description" content="DC Nation Tours offers premium Washington DC tours including guided day tours, LED night tours, walking tours, and airport transportation services.">
+    <meta name="keywords" content="Washington DC Tours, DC Night Tour, Guided Day Tours, DC Airport Transportation">
+    <title>DC Nation Tours | Premium Washington DC Tours & Transportation</title>
+    <style>
+        :root {
+            --primary: #1a237e;
+            --secondary: #ff6f00;
+            --accent: #4fc3f7;
+            --light: #f5f5f5;
+            --dark: #212121;
+            --text: #333333;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        
+        body {
+            background-color: var(--light);
+            color: var(--text);
+            line-height: 1.6;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        header {
+            background: linear-gradient(135deg, var(--primary), #283593);
+            color: white;
+            padding: 2rem 0;
+            text-align: center;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        }
+        
+        header h1 {
+            font-size: 2.8rem;
+            margin-bottom: 0.5rem;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+        }
+        
+        header p {
+            font-size: 1.2rem;
+            max-width: 800px;
+            margin: 0 auto;
+            opacity: 0.9;
+        }
+        
+        nav {
+            background-color: var(--secondary);
+            padding: 1rem 0;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+        
+        nav ul {
+            display: flex;
+            justify-content: center;
+            list-style: none;
+            flex-wrap: wrap;
+        }
+        
+        nav li {
+            margin: 0 15px;
+        }
+        
+        nav a {
+            color: white;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 1.1rem;
+            transition: all 0.3s ease;
+            padding: 5px 10px;
+            border-radius: 4px;
+        }
+        
+        nav a:hover {
+            background-color: rgba(255, 255, 255, 0.2);
+            transform: translateY(-2px);
+        }
+        
+        section {
+            padding: 4rem 0;
+        }
+        
+        .section-title {
+            text-align: center;
+            margin-bottom: 3rem;
+            color: var(--primary);
+            position: relative;
+        }
+        
+        .section-title:after {
+            content: '';
+            display: block;
+            width: 80px;
+            height: 4px;
+            background-color: var(--secondary);
+            margin: 10px auto;
+            border-radius: 2px;
+        }
+        
+        .tour-card {
+            background-color: white;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+            margin-bottom: 2rem;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        
+        .tour-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
+        }
+        
+        .tour-content {
+            padding: 1.5rem;
+        }
+        
+        .tour-title {
+            color: var(--primary);
+            margin-bottom: 1rem;
+            font-size: 1.5rem;
+        }
+        
+        .tour-highlight {
+            color: var(--secondary);
+            font-weight: 600;
+            margin: 1rem 0;
+        }
+        
+        .btn {
+            display: inline-block;
+            background-color: var(--secondary);
+            color: white;
+            padding: 10px 20px;
+            border-radius: 4px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            margin-top: 1rem;
+        }
+        
+        .btn:hover {
+            background-color: #e65100;
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        }
+        
+        .contact-info {
+            background-color: var(--primary);
+            color: white;
+            padding: 3rem 0;
+            text-align: center;
+        }
+        
+        .contact-info h2 {
+            margin-bottom: 2rem;
+            color: white;
+        }
+        
+        .contact-details {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 2rem;
+            margin-bottom: 2rem;
+        }
+        
+        .contact-item {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        
+        .social-links {
+            display: flex;
+            justify-content: center;
+            gap: 1.5rem;
+            margin-top: 2rem;
+        }
+        
+        .social-icon {
+            color: white;
+            font-size: 1.5rem;
+            transition: all 0.3s ease;
+        }
+        
+        .social-icon:hover {
+            color: var(--accent);
+            transform: translateY(-3px);
+        }
+        
+        footer {
+            background-color: var(--dark);
+            color: white;
+            text-align: center;
+            padding: 2rem 0;
+            font-size: 0.9rem;
+        }
+        
+        @media (max-width: 768px) {
+            header h1 {
+                font-size: 2.2rem;
+            }
+            
+            nav ul {
+                flex-direction: column;
+                align-items: center;
+            }
+            
+            nav li {
+                margin: 5px 0;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>DC Nation Tours and Travel</h1>
+            <p>Experience the Heart of America's Capital Like Never Before</p>
+        </div>
+    </header>
+    
+    <nav>
+        <div class="container">
+            <ul>
+                <li><a href="https://dcnationtours.com/">Home</a></li>
+                <li><a href="https://dcnationtours.com/tours/guided-day-tours-washington-dc/">Day Tours</a></li>
+                <li><a href="https://dcnationtours.com/tours/washington-dc-night-tours/">Night Tours</a></li>
+                <li><a href="#walking-tours">Walking Tours</a></li>
+                <li><a href="https://dcnationtours.com/airport-transportation-service/">Airport Transport</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+    
+    <section id="about">
+        <div class="container">
+            <h2 class="section-title">Welcome to DC Nation Tours</h2>
+            <p>At DC Nation Tours and Travel, we're passionate about showcasing the rich history, iconic landmarks, and vibrant culture of Washington DC. Our expertly crafted tours provide unforgettable experiences for visitors from around the world. Whether you're exploring by day or discovering the magic of DC after dark, our knowledgeable guides will bring the city's stories to life.</p>
+        </div>
+    </section>
+    
+    <section id="day-tours">
+        <div class="container">
+            <h2 class="section-title">Best Day Tours in Washington DC</h2>
+            <div class="tour-card">
+                <div class="tour-content">
+                    <h3 class="tour-title">Guided Day Tours of Washington DC</h3>
+                    <p>Our <a href="https://dcnationtours.com/tours/guided-day-tours-washington-dc/">Guided Day Tours</a> offer the perfect introduction to the nation's capital. Experience the grandeur of the National Mall, marvel at the architectural wonders of the Capitol Building, and stand in awe before the Lincoln Memorial.</p>
+                    <p class="tour-highlight">What makes our day tours special:</p>
+                    <ul>
+                        <li>Small group sizes for personalized attention</li>
+                        <li>Expert local guides with deep historical knowledge</li>
+                        <li>Comfortable transportation between sites</li>
+                        <li>Insider tips for making the most of your DC visit</li>
+                    </ul>
+                    <p>From the solemn beauty of the Vietnam Veterans Memorial to the inspiring words at the Martin Luther King Jr. Memorial, our day tours capture the essence of American history and democracy.</p>
+                    <a href="https://dcnationtours.com/tours/guided-day-tours-washington-dc/" class="btn">Explore Day Tours</a>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <section id="night-tours">
+        <div class="container">
+            <h2 class="section-title">Guided LED Night Tours</h2>
+            <div class="tour-card">
+                <div class="tour-content">
+                    <h3 class="tour-title">Washington DC Night Tours</h3>
+                    <p>Experience the magic of the capital after dark with our spectacular <a href="https://dcnationtours.com/tours/washington-dc-night-tours/">DC Night Tour</a>. As the sun sets, Washington DC transforms into a breathtaking landscape of illuminated monuments and memorials.</p>
+                    <p class="tour-highlight">Highlights of our LED Night Tours:</p>
+                    <ul>
+                        <li>Stunning views of lit-up monuments against the night sky</li>
+                        <li>Comfortable climate-controlled buses with large windows</li>
+                        <li>Engaging storytelling about DC's history and architecture</li>
+                        <li>Photo stops at key locations including the Lincoln Memorial and Capitol Building</li>
+                    </ul>
+                    <p>Our night tours offer a completely different perspective on the city, with fewer crowds and a more intimate atmosphere. See the White House glowing against the night sky and witness the Reflecting Pool in all its moonlit glory.</p>
+                    <a href="https://dcnationtours.com/tours/washington-dc-night-tours/" class="btn">Discover Night Tours</a>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <section id="walking-tours">
+        <div class="container">
+            <h2 class="section-title">Walking Tours of Washington DC</h2>
+            <div class="tour-card">
+                <div class="tour-content">
+                    <h3 class="tour-title">Immerse Yourself in DC's History</h3>
+                    <p>For those who prefer to explore at a slower pace, our walking tours offer an intimate look at Washington DC's most fascinating neighborhoods and historic districts.</p>
+                    <p class="tour-highlight">Walking Tour Options:</p>
+                    <ul>
+                        <li><strong>National Mall Explorer:</strong> Cover the iconic landmarks on foot with detailed historical context</li>
+                        <li><strong>Georgetown History Walk:</strong> Discover the charming streets of one of DC's oldest neighborhoods</li>
+                        <li><strong>Capital Hill Insider:</strong> Explore beyond the Capitol Building to residential areas with rich history</li>
+                        <li><strong>Museum District Focus:</strong> Dive deep into the Smithsonian museums with expert guidance</li>
+                    </ul>
+                    <p>Our walking tours are perfect for photography enthusiasts, history buffs, and anyone who wants to experience DC up close and personal.</p>
+                    <a href="https://dcnationtours.com/" class="btn">View Walking Tours</a>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <section id="transportation">
+        <div class="container">
+            <h2 class="section-title">Airport Transportation Services</h2>
+            <div class="tour-card">
+                <div class="tour-content">
+                    <h3 class="tour-title">DC Airport Transportation</h3>
+                    <p>Start and end your Washington DC visit with ease using our reliable <a href="https://dcnationtours.com/airport-transportation-service/">DC Airport Transportation</a> services. We provide comfortable, punctual transfers to and from all major airports serving the DC area.</p>
+                    <p class="tour-highlight">Our Transportation Advantages:</p>
+                    <ul>
+                        <li>Service to Dulles (IAD), Reagan National (DCA), and BWI airports</li>
+                        <li>Professional, courteous drivers familiar with DC traffic patterns</li>
+                        <li>Spacious vehicles accommodating individuals, families, and groups</li>
+                        <li>Competitive pricing with transparent, all-inclusive rates</li>
+                        <li>24/7 availability for early morning and late-night flights</li>
+                    </ul>
+                    <p>Whether you're traveling for business or pleasure, our airport transportation service ensures a stress-free beginning and end to your DC adventure.</p>
+                    <a href="https://dcnationtours.com/airport-transportation-service/" class="btn">Book Transportation</a>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <section id="contact" class="contact-info">
+        <div class="container">
+            <h2 class="section-title">Contact DC Nation Tours</h2>
+            <div class="contact-details">
+                <div class="contact-item">
+                    <strong>Phone:</strong> (571) 969-9558
+                </div>
+                <div class="contact-item">
+                    <strong>Email:</strong> smile@dcnationtours.com
+                </div>
+                <div class="contact-item">
+                    <strong>Address:</strong> 1400 I ST NW, District of Columbia, DC 20005
+                </div>
+            </div>
+            <p>Ready to explore Washington DC? Contact us today to book your tour or transportation service!</p>
+            
+            <div class="social-links">
+                <a href="https://www.facebook.com/DCNationGuidedTours" class="social-icon">Facebook</a>
+                <a href="https://www.instagram.com/dcnationtours/" class="social-icon">Instagram</a>
+                <a href="https://www.youtube.com/channel/UCVHltPthKluAjwdqLjVJ5Kg" class="social-icon">YouTube</a>
+                <a href="https://www.tiktok.com/@dcnationtoursntravel" class="social-icon">TikTok</a>
+                <a href="https://www.linkedin.com/company/106231692/admin/dashboard/" class="social-icon">LinkedIn</a>
+            </div>
+        </div>
+    </section>
+    
+    <footer>
+        <div class="container">
+            <p>&copy; 2023 DC Nation Tours and Travel. All rights reserved.</p>
+            <p>Your premier choice for <a href="https://dcnationtours.com/" style="color: var(--accent);">Washington DC Tours</a>, sightseeing adventures, and transportation services.</p>
+        </div>
+    </footer>
+</body>
+</html>
